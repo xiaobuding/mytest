@@ -1,0 +1,14 @@
+create table t_user
+(
+userid number primary key,
+username varchar2(20),
+password varchar2(20)
+);
+
+create sequence seq_user;
+
+insert into t_user values(seq_user.nextval,'admin','admin');
+
+commit;
+
+select * from t_user for update;
